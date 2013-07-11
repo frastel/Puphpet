@@ -1,0 +1,16 @@
+fixtures:
+  symlinks:
+    "apache":     "#{source_dir}/vendor/puphpet/puphpet-apache"
+    "apt":        "#{source_dir}/vendor/puppetlabs/puppetlabs-apt"
+    "composer":   "#{source_dir}/vendor/puphpet/puphpet-composer"
+    "git":        "#{source_dir}/vendor/puphpet/puphpet-git"
+    "mysql":      "#{source_dir}/vendor/puphpet/puphpet-mysql"
+    "nginx":      "#{source_dir}/vendor/jfryman/puppet-nginx"
+    "php":        "#{source_dir}/vendor/puphpet/puphpet-php"
+    "phpmyadmin": "#{source_dir}/vendor/frastel/puppet-phpmyadmin"
+    "postgresql": "#{source_dir}/vendor/puppetlabs/puppetlabs-postgresql"
+    "puphpet":    "#{source_dir}/vendor/puphpet/puppet-puphpet"
+    "puppi":      "#{source_dir}/vendor/example42/puppi"
+    "stdlib":     "#{source_dir}/vendor/puppetlabs/puppetlabs-stdlib"
+    "symfony":    "#{source_dir}/vendor/frastel/puppet-symfony"
+    "xdebug":     "#{source_dir}/vendor/puphpet/puphpet-xdebug"

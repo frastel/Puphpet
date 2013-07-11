@@ -24,3 +24,14 @@ puppetlabs/postgresql
 *Repository jfryman/puppet-nginx will be switched to original repository as soon as
 the introduction of composer.json is merged there.
 http://getcomposer.org/doc/05-repositories.md#vcs*
+
+
+RSpec Tests
+===================
+
+Additional packages/gems needed for RSpec tests which are currently not included in the PuPHPet edition:
+
+    sudo gem install rake
+    sudo gem install rspec-puppet
+    sudo gem install puppet-lint
+    sudo gem install puppetlabs_spec_helper

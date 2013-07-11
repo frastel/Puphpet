@@ -4,6 +4,7 @@ log
 tests/codeCoverage
 web/coverage
 phpunit.xml
+spec/fixtures
 twig.cache
 /vendor
 .idea
