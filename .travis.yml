@@ -1,6 +1,7 @@
 # travis trigger #1
 # no idea if this works
 # we need both PHP and Ruby
+language: php
 rvm: 1.8.7
 php:
   - 5.4
