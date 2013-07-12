@@ -1,6 +1,6 @@
-# travis trigger #1
-# no idea if this works
-# we need both PHP and Ruby
+# we actually need both environments PHP and rvm
+# however it is only possible to define the environment for one
+# language
 language: php
 rvm: 1.8.7
 php:
@@ -15,9 +15,9 @@ env:
 before_script:
   - composer install
 
-#PHPUnit + rake spec
-#script: phpunit --coverage-text --configuration phpunit_ci.xml
-script: rake spec
+# PHPUnit tests only, rake spec could not be done within the same travis worker
+# (ruby is installed on a PHP worker but .gemfile will be ignored)
+script: phpunit --coverage-text --configuration phpunit_ci.xml
 
 # whitelist
 branches:
