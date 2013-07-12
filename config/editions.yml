@@ -97,6 +97,11 @@ editions:
         - 'curl'
         - 'zip'
         - 'rsync'
+      gems:
+        - 'rake'
+        - 'rspec-puppet'
+        - 'puppet-lint'
+        - 'puppetlabs_spec_helper'
     php:
       version: php54
       modules:

@@ -6,3 +6,16 @@ package { [
   require => Exec['apt-get-update'],
 }
 {% endif %}
+
+{# Current vagrant boxes have already rubygems installed
+therefore we do not need any other requirements. This might change after we provide different
+boxes. #}
+{% if server.gems is defined and server.gems is not empty %}
+package { [
+{{ format.explode_and_quote(server.gems)|raw }}
+  ]:
+  ensure   => 'installed',
+  provider => 'gem',
+  require  => Exec['apt-get-update'],
+}
+{% endif %}
