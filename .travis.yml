@@ -16,7 +16,8 @@ before_script:
   - composer install
 
 #PHPUnit + rake spec
-script: phpunit --coverage-text --configuration phpunit_ci.xml
+#script: phpunit --coverage-text --configuration phpunit_ci.xml
+script: rake spec
 
 # whitelist
 branches:
