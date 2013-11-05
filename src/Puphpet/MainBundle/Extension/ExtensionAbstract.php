@@ -76,9 +76,16 @@ abstract class ExtensionAbstract implements ExtensionInterface
      */
     public function renderManifest(array $data = [])
     {
-        return $this->getManifestController()
-            ->indexAction($data)
-            ->getContent();
+        $rendered = $this->getManifestController()
+                    ->indexAction($data);
+
+        // extension uses already the new rendering possibility?
+        if (is_string($rendered)) {
+            return $rendered;
+        }
+
+        // extension uses old controller rendering and thus a Response instance is returned
+        return $rendered->getContent();
     }
 
     /**

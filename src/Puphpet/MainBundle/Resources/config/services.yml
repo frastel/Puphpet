@@ -32,3 +32,10 @@ services:
             - "@randomlib"
         tags:
             - { name: twig.extension }
+
+    puphpet.template_renderer:
+        class: Puphpet\MainBundle\Rendering\TemplateRenderer
+        public: false
+        abstract: true
+        arguments:
+            - "@templating"
